@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     else
       @prototype = Prototype.find(params[:prototype_id])
       @comment.user_id = @prototype.user_id
-      render 'prototypes/show'
+      redirect_to prototype_path(@prototype)
     end
   end
 
