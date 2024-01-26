@@ -1,0 +1,9 @@
+<% @user.prototypes.each do |prototype| %>
+  <div class="card">
+    <%= link_to image_tag(prototype.image), prototype_path(prototype), class: :card__image %>
+    <div class="card__text">
+      <p class="card__title"><%= prototype.title %></p>
+      <p class="card__user"><%= link_to prototype.user.name, user_path(prototype.user) %></p>
+    </div>
+  </div>
+<% end %>
